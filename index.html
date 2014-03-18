@@ -4,12 +4,35 @@
 <meta charset="UTF-8">
 <title>html</title>
 <style>
+	
+body,h2,h3{
+	margin:0px;	
+}
 body {
 	font-size: small;
 	line-height: 1.6em;
-	margin: 0px;
 	background-color: #b5a789;
 }
+
+a {
+    color: #00528C;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.warp {
+	width: 980px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
 
 #header {
 	background-color: #675c47;
@@ -41,6 +64,11 @@ body {
 	margin: 0px 10px 10px 10px;
 }
 
+#category h2{
+	text-align:center;	
+	line-height:40px;
+}
+
 
 #ad {
 	background-color: #696969;
@@ -51,19 +79,18 @@ body {
 	padding: 5px;
 }
 
+#ad h2{
+	text-align:center;	
+	line-height:40px;
+}
+
+
 #footer {
 	background-color: #326870;
 	text-align: center;
 	margin: 10px;
 	clear: right;
 	padding: 20px;
-}
-
-
-.warp {
-	width: 980px;
-	margin-left:auto;
-	margin-right:auto;
 }
 
 #googlelogo
@@ -79,13 +106,6 @@ body {
 	top:50px;
 	left:10px;
 }
-
-ul, ol {
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-}
-
 
 #nav {
 	text-align:right;
@@ -115,10 +135,22 @@ ul, ol {
     font-size: 14px;
 }
 
-a {
-    color: #00528C;
-    text-decoration: none;
+.cat{
+	//border:	1px solid red;
+	padding:6px;
 }
+
+.cat h3{
+	text-align:center;
+	border-bottom: 1px solid #f588a2;
+	margin-bottom:5px;
+}
+
+.cat ul li a:hover{
+	border:1px solid red;
+	color:red;	
+}
+
 </style>
 </head>
 <body>
@@ -141,18 +173,87 @@ a {
 				<li><a href="">第五菜单</a></li>
 			</ul>
 		</div>
-		<div id="category">目录<br/>我是第一个左侧边栏<br/>我是第一个左侧边栏<br/>我是第一个左侧边栏<br/></div>
-		<div id="ad">据悉，全国“两会”后，北京市公安机关继续加强社会面巡逻防控，在组织巡警、交警、派出所民警24小时不间断巡控的基础上，安排公安特警武装处突车全天候执行巡逻防控任务，强力震慑打击街头违法犯罪活动。上海、哈尔滨、长沙、广州、成都、昆明、乌鲁木齐、拉萨等地组织巡特警强化重点地区、重点部位和重点时段的武装巡逻，强化对社会面的动态控制和快速反应能力，有效预防和打击违法犯罪活动。</div>
-		<div id="main">
-			公安部要求，各地公安机关要按照“创新立体化社会治安防控体系”的总要求，本着“全面覆盖，突出重点，以快制动，<br />
-			有效控制”的原则，探索建立动态社会环境下的新型警务模式，着力形成动静结合、相互呼应、整体联动的全时空巡逻防控网络。<br />
-			要进一步增强防控工作的针对性、有效性和预见性，突出整体防控、重点管控，提高见警率和管事率，最大限度地将警力摆上街面，<br />
-			实行武装巡逻、动中备勤的常态化。要进一步健全应急指挥机制，完善应急处突工作预案，做到快速反应、高效处置。对公然行凶、<br />
-			危害公共安全的严重暴力犯罪分子，要依法采取坚决果断措施及时处置。
+		<div id="category">
+			<h2>目录</h2>
+			<div class="cat">
+				<h3>中国菜</h3>
+				<div>
+					<ul>
+						<li><a href="">宫爆鸡丁</a></li>
+						<li><a href="">京酱肉丝</a></li>
+						<li><a href="">鱼香肉丝</a></li>
+						<li><a href="">麻辣鸡丝</a></li>	
+						<li><a href="">麻婆豆腐</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="cat">
+				<h3>山东菜</h3>
+				<div>
+					<ul>
+						<li><a href="">烙饼卷大葱</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="cat">
+				<h3>天津菜</h3>
+				<div>
+					<ul>
+						<li><a href="">狗不理</a></li>
+						<li><a href="">煎饼果子</a></li>
+					</ul>
+				</div>
+			</div>
+			
 		</div>
-		<div id="footer">新浪简介┊About Sina┊广告服务┊联系我们┊招聘信息┊网站律师┊SINA
-			English┊通行证注册┊产品答疑 Copyright © 1996-2014 SINA Corporation, All Rights
-			Reserved 新浪公司 版权所有</div>
+		<div id="ad">
+			<h2>广告区域</h2>
+			<div class="cat">
+				<h3>天津菜</h3>
+				<div>
+					<ul>
+						<li><a href="">狗不理</a></li>
+						<li><a href="">煎饼果子</a></li>
+					</ul>
+				</div>
+			</div>
+				
+		</div>
+		<div id="main">
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+			这里是主要内容区<br/>
+		</div>
+		<div id="footer">ganma.cc</div>
 	</div>
 </body>
 </html>
