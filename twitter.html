@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>twitter</title>
+	<style type="text/css">
+		body,h1,h2,h3{
+			margin: 0px;
+		}
+
+	body{
+		font-size: small;
+		background-image: url(images/bg-cloud.png);
+		background-repeat: repeat-x;
+		background-color: #c0deed;
+	}
+
+	.head-warp{
+		width: 1175px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.warp{
+		width: 895px;
+		margin-right: auto;
+		margin-left: auto;	
+	}
+
+	header{
+		background-color: #ffffff;
+		height: 46px;
+	}
+
+	ol,ul{
+		list-style-type: none;
+	}
+
+	header nav{
+		float: left;
+	}
+
+	header nav ul{
+		margin: 0px;
+		padding: 14px 0px 0px 0px;
+	}
+
+	header nav ul li{
+		display: inline;
+		padding: 0px 15px 3px 15px;
+	}
+
+	header nav ul li.active{
+		border-bottom: 4px solid #55acee;
+	}
+
+	header nav ul li:hover{
+    	border-bottom: 4px solid #55acee;
+    }
+
+    header #twitter-icon{
+    	position: absolute;
+    	top:15px;
+    	left: 583px;
+    	width: 20px;
+    	height: 17px;
+    	background-image: url(images/twitter.png);
+    	background-repeat: repeat-x;
+    }
+
+    header #nav-aside{
+    	float: right;
+    }
+	
+	header #nav-aside ul{
+    	margin: 0px;
+    }
+
+	header #nav-aside ul li{
+    	display: inline;
+    	margin: 0px 10px 0px 10px;
+    }
+
+
+    #left-main{
+    	margin: 10px 6px 0px 0px;
+    	float: left;
+    	width: 292px;
+    }
+
+    .left-block{
+    	border:1px solid #e1e8ed;
+    	border-radius: 3px;
+    	height: 250px;
+    	background-color: #ffffff;
+    }
+
+    .left-block #userinfo{
+    	height:145px;
+    	background-color: #c4c4c4;
+    }
+
+    #center-main{
+    	margin: 10px 0px 10px 6px;
+    	float: left;
+    	width: 591px;
+    }
+
+    .center-block{
+    	border:1px solid #e1e8ed;
+    	border-radius: 3px;
+    	height: 250px;
+    	background-color: #ffffff;
+    }
+
+	</style>
+</head>
+<body>
+<div class="head-warp">
+	<header>
+		<nav>
+			<ul>
+				<li><a href=""><img src="images/home.png"/></a></li>
+				<li class="active"><a href=""><img src="images/connect.png"/></a></li>
+				<li><a href=""><img src="images/discover.png"/></a></li>
+				<li><a href=""><img src="images/me.png"/></a></li>
+			</ul>
+		</nav>
+		<div id="twitter-icon"></div>
+		<div id="nav-aside">
+			<ul>
+				<li><input type="text" value="Search"/></li>
+				<li><img src="images/email.png" /></li>
+				<li><img src="images/setting.png" /></li>
+				<li><img src="images/msg.png" /></li>	
+			</ul>
+		</div>
+	</header>
+</div>
+<div class="warp">
+	<div id="left-main">
+		<div class="left-block">
+			<div id="userinfo">
+			</div>
+		</div>
+	</div>
+	<div id="center-main">
+		<div class="center-block">
+			<div id="content">
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
