@@ -1,79 +1,109 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+<title>html</title>
+<style>
+body {
+	font-size: small;
+	line-height: 1.6em;
+	margin: 0px;
+	background-color: #b5a789;
+}
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Ganma : " />
+#header {
+	background-color: #675c47;
+	height: 50px;
+	margin: 10px;
+}
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+#logo {
+	padding: 5px 20px 5px 0;
+}
 
-    <title>Ganma</title>
-  </head>
+#adlink {
+	text-align:right;
+	width:100px;
+	float:right;
+	padding: 5px 20px 5px 0;
+	margin:10px 0px 0px 10px;
+}
 
-  <body>
+#main {
+	background-color: #696969;
+	margin: 10px 180px 10px 110px;
+}
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/limaoyuan/ganma">View on GitHub</a>
+#category{
+	background-color: #696969;
+	float:left;
+	width:90px;
+	margin: 0px 10px 10px 10px;
+}
 
-          <h1 id="project_title">Ganma</h1>
-          <h2 id="project_tagline"></h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/limaoyuan/ganma/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/limaoyuan/ganma/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+#ad {
+	background-color: #696969;
+	margin-top: 5px;
+	margin: 0px 10px 10px 10px;
+	float: right;
+	width: 150px;
+	padding: 5px;
+}
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+#footer {
+	background-color: #326870;
+	text-align: center;
+	margin: 10px;
+	clear: right;
+	padding: 20px;
+}
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+.warp {
+	width: 980px;
+	margin-left:auto;
+	margin-right:auto;
+}
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+#googlelogo
+{
+	position:absolute;
+	top:50px;
+	left:400px;
+}
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Ganma maintained by <a href="https://github.com/limaoyuan">limaoyuan</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+#googlelogo2
+{
+	position:fixed;
+	top:50px;
+	left:10px;
+}
+</style>
+</head>
+<body>
+	<div id="googlelogo2"><img src="http://www.google.com/images/icons/ui/doodle_plus/doodle_plus_google_logo_on_grey.gif"/></div>
+	<div id="googlelogo"><img src="http://www.google.com/images/icons/ui/doodle_plus/doodle_plus_google_logo_on_grey.gif"/></div>
+	<div class="warp">
+		<div id="header">
+		<div id="adlink">abcd</div>
+			<div id="logo">
+				<img src="http://pic.lietou-static.com/p/beta2/images/logo.png"
+					title="猎聘网" />
+			</div>
+		</div>
+		<div id="category">目录<br/>我是第一个左侧边栏<br/>我是第一个左侧边栏<br/>我是第一个左侧边栏<br/></div>
+		<div id="ad">据悉，全国“两会”后，北京市公安机关继续加强社会面巡逻防控，在组织巡警、交警、派出所民警24小时不间断巡控的基础上，安排公安特警武装处突车全天候执行巡逻防控任务，强力震慑打击街头违法犯罪活动。上海、哈尔滨、长沙、广州、成都、昆明、乌鲁木齐、拉萨等地组织巡特警强化重点地区、重点部位和重点时段的武装巡逻，强化对社会面的动态控制和快速反应能力，有效预防和打击违法犯罪活动。</div>
+		<div id="main">
+			公安部要求，各地公安机关要按照“创新立体化社会治安防控体系”的总要求，本着“全面覆盖，突出重点，以快制动，<br />
+			有效控制”的原则，探索建立动态社会环境下的新型警务模式，着力形成动静结合、相互呼应、整体联动的全时空巡逻防控网络。<br />
+			要进一步增强防控工作的针对性、有效性和预见性，突出整体防控、重点管控，提高见警率和管事率，最大限度地将警力摆上街面，<br />
+			实行武装巡逻、动中备勤的常态化。要进一步健全应急指挥机制，完善应急处突工作预案，做到快速反应、高效处置。对公然行凶、<br />
+			危害公共安全的严重暴力犯罪分子，要依法采取坚决果断措施及时处置。
+		</div>
+		<div id="footer">新浪简介┊About Sina┊广告服务┊联系我们┊招聘信息┊网站律师┊SINA
+			English┊通行证注册┊产品答疑 Copyright © 1996-2014 SINA Corporation, All Rights
+			Reserved 新浪公司 版权所有</div>
+	</div>
+</body>
 </html>
