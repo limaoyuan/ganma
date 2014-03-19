@@ -3,7 +3,7 @@
 <head>
 	<title>twitter</title>
 	<style type="text/css">
-		body,h1,h2,h3{
+		body,h1,h2,h3,input {
 			margin: 0px;
 		}
 
@@ -13,6 +13,11 @@
 		background-repeat: repeat-x;
 		background-color: #c0deed;
 	}
+	
+	ol,ul{
+		list-style-type: none;
+	}
+
 
 	.head-warp{
 		width: 1175px;
@@ -31,17 +36,14 @@
 		height: 46px;
 	}
 
-	ol,ul{
-		list-style-type: none;
-	}
-
 	header nav{
 		float: left;
+		height:46px
 	}
 
 	header nav ul{
-		margin: 0px;
-		padding: 14px 0px 0px 0px;
+		padding:0px;
+		margin: 14px 0px 0px 0px;
 	}
 
 	header nav ul li{
@@ -57,29 +59,37 @@
     	border-bottom: 4px solid #55acee;
     }
 
-    header #twitter-icon{
+  header #twitter-icon{
     	position: absolute;
     	top:15px;
-    	left: 583px;
+    	left: 700px;
     	width: 20px;
     	height: 17px;
     	background-image: url(images/twitter.png);
     	background-repeat: repeat-x;
     }
 
-    header #nav-aside{
+  header #nav-aside{
     	float: right;
+    	height:46px;
     }
+    
 	
 	header #nav-aside ul{
     	margin: 0px;
-    }
+    	height:46px;
+  }
+  
+  header #nav-aside ul * {
+    	vertical-align:middle;
+  }
+  
 
 	header #nav-aside ul li{
-    	display: inline;
-    	margin: 0px 10px 0px 10px;
+    	display: inline-block;
+    	margin: 10px 10px 0px 10px;
     }
-
+ 	
 
     #left-main{
     	margin: 10px 6px 0px 0px;
