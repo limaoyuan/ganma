@@ -87,7 +87,7 @@
 
 	header #nav-aside ul li{
     	display: inline-block;
-    	margin: 10px 10px 0px 10px;
+    	margin: 7px 10px 0px 10px;
     }
  	
 
@@ -103,11 +103,11 @@
     	height: 250px;
     	background-color: #ffffff;
     }
-
     .left-block #userinfo{
     	height:145px;
     	background-color: #c4c4c4;
-    }
+    	overflow: hidden;
+	}
 
     #center-main{
     	margin: 10px 0px 10px 6px;
@@ -122,6 +122,61 @@
     	background-color: #ffffff;
     }
 
+    #userpic{
+    	width: 48px;
+    	height: 48px;
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-top: 16px;
+    	border:3px solid #e1e8ed;
+    }
+    #username{
+    	color: #ffffff;
+    	margin-top: 16px;
+    	text-align: center;
+    }
+
+
+    #connection_info{
+    	margin: 0px;
+    	padding: 0px;
+    }
+    #connection_info li{
+    	display: inline-block;
+    	margin-top: 12px;
+    	margin-left: 13px;
+    	margin-right: 13px;
+    	height: 41px
+    }
+
+	#connection_info li i{
+    	font-size: 9px;
+    	color: #989999;
+    }
+
+    #connection_info li{
+    	font-size: 15px;
+    	color: #55acee;
+    }
+
+    #connection_other{
+    	margin:0px;
+    	background-color: #ecf6ff;
+    	height: 52px;
+    	text-align: center;
+    }
+
+    #connection_btn{
+    	margin-top: 9px;
+    	width: 266px;
+    	height: 33px;
+    	border:1px solid #55acee;
+    	background-color: #ffffff;
+    	border-radius: 4px;
+    	color: #989999;
+    	font-size: 10px;
+    	text-align: left;
+    }
 	</style>
 </head>
 <body>
@@ -150,6 +205,18 @@
 	<div id="left-main">
 		<div class="left-block">
 			<div id="userinfo">
+				<div id="userpic"><img src="images/userpic.png"></div>
+				<div id="username">Username<br/>@user_name</div>
+			</div>
+			<div id="connetion">
+				<ul id="connection_info">
+					<li><i>TWEETS</i><br/>26</li>
+					<li><i>FOLLOWING</i><br/>27</li>
+					<li><i>FOLLOWERS</i><br/>28</li>
+				</ul>
+			</div>
+			<div id="connection_other">
+				<button id="connection_btn">Compose new Tweet...</button>
 			</div>
 		</div>
 	</div>
