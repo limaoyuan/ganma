@@ -101,7 +101,7 @@
     	margin-top: 10px;
     	border:1px solid #e1e8ed;
     	border-radius: 3px;
-    	height: 250px;
+    	//height: 250px;
     	background-color: #ffffff;
     	border-radius: 5px;
     }
@@ -194,6 +194,12 @@
     	padding: 0px;
     }
     
+    #newfriend-footer a{
+    	padding-left: 15px;
+    	color: #55acee;
+    	font-size: 16px;
+    }
+
     #newfriend-title ul *{
     	vertical-align: middle;
     }
@@ -210,6 +216,48 @@
     	text-decoration: none;
     }
 
+
+
+    .newfriend-row{
+    	vertical-align: top;
+    	padding-left:15px;
+    	margin-top: 7px;
+    	margin-bottom: 7px;
+    }
+
+    .userpic_none{
+    	border-radius: 5px;
+    	margin:0px;
+    	padding: 0px;
+    	width: 48px;
+    	height: 48px;
+    	background-color: #c4c4c4;
+    	display: inline-block;
+    }
+
+	.newfriend-info{
+		font-size: 14px;
+		margin-left: 10px;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.newfriend-info button{
+		margin-top: 6px;
+		width: 87px;
+		height: 29px;
+		background-image: url(images/flowerbtn.png);
+		border:0px;
+	}
+
+	.newfriend-info a{
+		color: #98a1ad;
+		margin-left: 28px;
+	}
+
+	.newfriend-info-up .wrong-mini{
+		margin-left: 14px;
+	}
 
 	</style>
 </head>
@@ -231,7 +279,7 @@
 				<li><img src="images/email.png" /></li>
 				<li><img src="images/setting.png" /></li>
 				<li><img src="images/msg.png" /></li>	
-			</ul>
+			</ul>	
 		</div>
 	</header>
 </div>
@@ -253,16 +301,47 @@
 				<button id="connection_btn">Compose new Tweet...</button>
 			</div>
 		</div>
-
 		<div class="left-block">
 			<div id="newfriend">
 				<div id="newfriend-title">
 					Who to follow <ul><li><a href="">Refersh</a></li><li><a href="">View all</a></li></ul>
 				</div>
-				<div id="newfriend-list">newfriend-list</div>
+				<div id="newfriend-list">
+					<div class="newfriend-row">
+						<div class="userpic_none"></div>
+						<div class="newfriend-info">
+							<div class="newfriend-info-up">
+								Simillar<a>@Simillar</a><span class="wrong-mini">X</span>
+							</div>
+							<button></button>
+						</div>
+					</div>
+					<div class="newfriend-row">
+						<div class="userpic_none"></div>
+						<div class="newfriend-info">
+							<div class="newfriend-info-up">
+								Simillar<a>@Simillar</a><span class="wrong-mini">X</span>
+								<br/>
+								Flollowed by Limy
+							</div>
+							<button></button>
+						</div>
+					</div>
+					<div class="newfriend-row">
+						<div class="userpic_none"></div>
+						<div class="newfriend-info">
+							<div class="newfriend-info-up">
+								Simillar<a>@Simillar</a><span class="wrong-mini">X</span>
+							</div>
+							<button></button>
+						</div>
+					</div>
+				</div>
+				<div id="newfriend-footer">
+					<a>someing link</a><a>someing link</a>
+				</div>
 			</div>
 		</div>
-
 	</div>
 	<div id="center-main">
 		<div class="center-block">
