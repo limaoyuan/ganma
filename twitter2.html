@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>保雷版 twitter2</title>
+	<style type="text/css">
+	body,ul,li,h1,h2,h3,h4,h5,h6,dl,dt,dd,div,input,select,textarea,img,section{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	ul,ol{
+		list-style-type: none;
+	}
+	
+	div.header-wrap header{
+		background-color: #ffffff;
+		height: 46px;
+	}
+
+	body{
+		font-size: small;
+		background-image: url(images/bg-cloud.png);
+		background-repeat: repeat-x;
+		background-color: #c0deed;
+	}
+
+	.header-wrap{
+		width: 1175px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.wrap{
+		width: 895px;
+		margin-right: auto;
+		margin-left: auto;	
+	}
+
+	.header-wrap header nav ul{
+		float: left;
+	}
+
+	.header-wrap header nav ul li{
+		text-align: center;
+		display: inline-block;
+		width: 90px;
+		height: 28px;
+		padding-top: 14px;
+	}
+
+	.header-wrap header nav ul li.active{
+		border-bottom: 4px solid #55acee;
+	}
+
+	.header-wrap header nav ul li:hover{
+		border-bottom: 4px solid #55acee;
+	}
+
+	.small-twitter-icon{
+		position: absolute;
+    	top:15px;
+    	left: 700px;
+    	width: 20px;
+    	height: 17px;
+    	background-image: url(images/twitter.png);
+	}
+	.user-nav {
+		float: right;
+		height: 46px;
+	}
+
+	.user-nav *{
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	.side{
+		margin-top: 10px;
+    	margin-bottom: 10px;
+    	border-radius: 3px;
+		width: 292px;
+	}
+
+	.user{
+		border:1px solid #e1e8ed;
+		background-color: #ffffff;
+	}
+
+	.user .userinfo{
+		height:145px;
+		background-color: #c4c4c4;
+		overflow: hidden;
+	}
+
+	.userpic_48{
+		width: 48px;
+    	height: 48px;
+    	border:3px solid #e1e8ed;
+	}
+
+	.userpic_none_48{
+		width: 48px;
+    	height: 48px;
+		border-radius: 5px;
+    	background-color: #c4c4c4;
+	}
+
+	.user .userinfo dl dt{
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-top: 16px;
+    	margin-bottom: 20px;
+	}
+
+	.user .userinfo dl dd{
+		color: #FFFFFF;
+		text-align: center;
+	}
+
+	.user .followinfo{
+		height: 53px;
+	}
+
+	.user .followinfo ul li{
+		display: inline-block;
+		margin:12px;
+	}
+
+	.user .followinfo ul li em {
+		font-size: 9px;
+    	color: #989999;
+	}
+
+	.user .followinfo ul li i {
+		font-size: 15px;
+    	color: #55acee;
+	}
+
+	.user .otherinfo{
+		background-color: #ecf6ff;
+    	height: 52px;
+    	text-align: center;
+	}
+	
+	.user .otherinfo button{
+		width: 266px;
+    	height: 33px;
+    	border:1px solid #55acee;
+    	background-color: #ffffff;
+    	border-radius: 4px;
+    	color: #989999;
+    	font-size: 10px;
+    	text-align: left;
+    	margin-top: 9px;
+	}
+
+	.follow {
+		height: 266px;
+		background-color: #ffffff;
+		padding-bottom: 10px;
+	}
+
+	.side header {
+		padding-top:16px;
+		margin-bottom:16px;
+		margin-left:16px;
+	}
+
+	.side header i{
+		font-size: 16px;
+		margin: 5px;
+	}
+
+	.side header a {
+		font-size: 10px;
+    	color: #55acee;
+    	text-decoration: none;
+    	margin: 5px;
+	}
+
+	.follow dl{
+		margin-left: 16px;
+		margin-bottom: 10px
+	}
+
+	.follow dl *{
+		vertical-align: middle;
+	}
+
+	.follow dt{
+		display: inline-block;
+	}
+
+	.follow dd{
+		display: inline-block;
+	}
+
+	.follow dl dd div{
+		font-size: 14px;
+		padding: 5px;
+	}
+	.follow dl dd div a{
+		color: #98a1ad;
+		padding-left: 15px;
+	}
+
+	.follow dl dd div span{
+		padding-left: 60px;
+	}
+
+	.follow-btn{
+		width: 87px;
+		height: 29px;
+		background-image: url(images/flowerbtn.png);
+		border:0px;
+	}
+
+	.follow footer{
+		color: #55acee;
+    	font-size: 16px;
+		padding-left:16px;
+	}
+
+	.link {
+		background-color: #ffffff;
+		padding-bottom: 10px;
+	}
+
+	.links a{
+		display: block;
+		color:#55acee;
+		font-size: 14px;
+		padding-left: 16px;
+		padding-top: 5px;
+	}
+
+	.left{
+		float: left;
+	}
+
+	.main{
+		margin-top: 10px;
+		float: right;
+		background-color: #ffffff;
+		width: 578px;
+	}
+	.main .title{
+	    color: #98A1AD;
+	    font-size: 22px;
+	    padding: 15px 0 15px 11px;
+	}
+
+	.main .content dl{
+		border-top: 1px solid #98A1AD;
+	    padding-bottom: 12px;
+	    padding-top: 12px;
+	}
+	.main .content dl dt {
+		margin-left: 12px;
+		display: inline-block;
+		width: 48px;
+	}
+
+	.main .content dl dd {
+		font-size: 12px;
+		display: inline-block;
+		width:500px;
+	}
+
+	.main .content dl dd div{
+		padding:3px;
+	}
+
+	.main .content dl dd.footer{
+		color: #999999;
+	}
+
+	.main .content dl dd div.content a{
+		color: #55ACEE;
+	}
+
+	.main .content dl dd div.footer span.quick {
+		float: right;
+	}
+
+	.main .content dl dd div.footer span.quick a{
+		color: #999999;
+		margin: 3px;
+		text-decoration: none;
+	}
+
+	.main .content dl dd div.footer em{
+		color: #999999;
+	}
+
+
+	.main .content dl dt div.refresh{
+		width: 14px;
+		height: 15px;
+		background-image: url(images/refresh.png);
+		float: right;
+	}
+
+	.main .content dl dt div.userpic_none_48{
+		margin-top: 20px;
+	}
+
+	.main .content dl dd div.refreshinfo{
+		color:#999999;
+	}
+	</style>
+</head>
+<body>
+	<div class="header-wrap">
+		<header>
+			<nav>
+				<ul>
+					<li><a href=""><img src="images/home.png"/></a></li>
+					<li class="active"><a href=""><img src="images/connect.png"/></a></li>
+					<li><a href=""><img src="images/discover.png"/></a></li>
+					<li><a href=""><img src="images/me.png"/></a></li>
+				</ul>
+			</nav>
+			<ul class="user-nav">
+				<li><input type="text" value="Search"/></li>
+				<li><img src="images/email.png" /></li>
+				<li><img src="images/setting.png" /></li>
+				<li><img src="images/msg.png" /></li>	
+			</ul>
+			<div class="small-twitter-icon"></div>
+		</header>
+	</div>
+	<div class="wrap">
+		<div class="left">
+			<section class="side user">
+				<div class="userinfo">
+					<dl>
+						<dt class="userpic_48"><img src="images/userpic.png"/></dt>
+						<dd>Username</dd>
+						<dd>@username</dd>
+					</dl>
+				</div>
+				<div class="followinfo">
+					<ul>
+						<li><em>TWEETS</em><br/><i>26</i></li>
+						<li><em>FOLLOWING</em><br/><i>27</i></li>
+						<li><em>FOLLOWERS</em><br/><i>28</i></li>
+					</ul>
+				</div>
+				<div class="otherinfo">
+					<button>Compose new Tweet...</button>
+				</div>
+			</section>
+			<section class="side follow">
+				<header>
+					<i>Who to follow</i>
+					<a href="">Refersh</a>
+					<a href="">View all</a>
+	    		</header>
+	    		<dl>
+	    			<dt class="userpic_none_48"></dt>
+	    			<dd>
+	    				<div>Simillar<a>@Simillar</a><span>X</span></div>
+	    				<button class="follow-btn"></button>
+	    			</dd>
+	    		</dl>
+	    		<dl>
+	    			<dt class="userpic_none_48"></dt>
+	    			<dd>
+	    				<div>Simillar<a>@Simillar</a><span>X</span></div>
+	    				<button class="follow-btn"></button>
+	    			</dd>
+	    		</dl>
+	    		<dl>
+	    			<dt class="userpic_none_48"></dt>
+	    			<dd>
+	    				<div>Simillar<a>@Simillar</a><span>X</span></div>
+	    				<button class="follow-btn"></button>
+	    			</dd>
+	    		</dl>
+				<footer><a>someing link</a><a>someing link</a></footer>
+			</section>
+			<section class="side link">
+				<header>
+					Trends <a href="">Change</a>
+	    		</header>
+	    		<div class="links">
+	    			<a href="">#ABCDEF</a>
+					<a href="">#ABCDEF</a>
+					<a href="">#ABCDEF</a>
+					<a href="">#ABCDEF</a>
+					<a href="">#ABCDEF</a>
+					<a href="">#ABCDEF</a>
+	    		</div>
+			</section>
+		</div>
+		<section class="main">
+			<div class="title">Tweets</div>
+			<div class="content">
+				<dl>
+					<dt>
+						<div class="refresh"></div>
+						<div class="userpic_none_48"></div>
+					</dt>
+					<dd>
+						<div class="refreshinfo">Retweeted by Twitter</div>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<em>Expand</em>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt class="userpic_none_48"></dt>
+					<dd>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<span class="expand">Expand</span>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						<div class="refresh"></div>
+						<div class="userpic_none_48"></div>
+					</dt>
+					<dd>
+						<div class="refreshinfo">Retweeted by Twitter</div>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<span class="expand">Expand</span>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt class="userpic_none_48"></dt>
+					<dd>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<span class="expand">Expand</span>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						<div class="refresh"></div>
+						<div class="userpic_none_48"></div>
+					</dt>
+					<dd>
+						<div class="refreshinfo">Retweeted by Twitter</div>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<span class="expand">Expand</span>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt class="userpic_none_48"></dt>
+					<dd>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<span class="expand">Expand</span>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>
+						<div class="refresh"></div>
+						<div class="userpic_none_48"></div>
+					</dt>
+					<dd>
+						<div class="refreshinfo">Retweeted by Twitter</div>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<span class="expand">Expand</span>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt class="userpic_none_48"></dt>
+					<dd>
+						<div class="userinfo">Username <i>@username</i> . <i>6 min</i></div>
+						<div class="content">i will go you a account a complate acount of the system <a href="">我是一个超链接</a></div>
+						<div class="footer">
+							<span class="expand">Expand</span>
+							<span class="quick">
+								<a href="">Reply</a>
+								<a href="">Retweet</a>
+								<a href="">Favourite</a>
+								<a href="">...More</a>
+							</span>
+						</div>
+					</dd>
+				</dl>
+
+
+			</div>
+		</section>
+	</div>
+</body>
+</html>
